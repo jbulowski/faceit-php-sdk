@@ -2,6 +2,10 @@
 
 _Currently only supports the `search` endpoints_
 
+## Installation
+
+`composer require jbulowski/faceit-php-sdk`
+
 ## Initialization
 
 ```
