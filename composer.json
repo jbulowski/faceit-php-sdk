@@ -1,4 +1,10 @@
 {
+  "name": "jbulowski/faceit-php-sdk",
+  "type": "library",
+  "description": "A PHP wrapper for Faceit's API.",
+  "keywords": ["faceit", "sdk", "php", "api"],
+  "homepage": "https://github.com/jbulowski/faceit-php-sdk",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "FaceitClient\\": "src/"
