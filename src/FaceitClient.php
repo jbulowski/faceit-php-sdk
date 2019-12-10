@@ -29,5 +29,10 @@ class FaceitClient
     {
         return new FaceitSearch($this->api_key);
     }
+
+    public function championship(string $id): FaceitChampionships
+    {
+        return new FaceitChampionships($this->api_key, $id);
+    }
     
 }

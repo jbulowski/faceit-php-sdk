@@ -16,7 +16,26 @@ $faceit = new FaceitClient\FaceitClient([
 
 ## Endpoints
 
-#### ~~Championships~~
+#### Championships ✓
+
+<details>
+<summary>Click to expand</summary>
+<p>
+
+**details**
+
+`$championship = $faceit->championship('id')->details();`
+
+**matches**
+
+`$championship_matches = $faceit->championship('id')->matches();`
+
+**subscriptions**
+
+`$championship_subscriptions = $faceit->championship('id')->subscriptions();`
+
+</p>
+</details>
 
 #### ~~Games~~
 

@@ -7,7 +7,7 @@ namespace FaceitClient;
 abstract class FaceitResource
 {
 
-    private const API_URI = 'https://open.faceit.com/data/v4/';
+    private const API_URI = 'https://open.faceit.com/data/v4';
 
     protected $request_endpoint;
 
@@ -20,6 +20,9 @@ abstract class FaceitResource
      */
     protected function fullApiEndpoint(): string
     {
+        if (empty($this->request_parameters)) {
+            return self::API_URI . $this->request_endpoint;
+        }
         return self::API_URI . $this->request_endpoint . '?' . http_build_query($this->request_parameters);
     }
 
@@ -51,6 +54,6 @@ abstract class FaceitResource
         if ($initialize) {
             $this->request_endpoint = '';
         }
-        $this->request_endpoint .= ($this->request_endpoint === '') ? $part.'/' : $part;
+        $this->request_endpoint .= ($this->request_endpoint === '') ? $part.'/' : '/'.$part;
     }
 }
