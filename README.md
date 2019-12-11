@@ -132,6 +132,25 @@ $faceit = new FaceitClient\FaceitClient([
 </p>
 </details>
 
-#### ~~Teams~~
+#### Teams ✓
+
+<details>
+<summary>Click to expand</summary>
+<p>
+
+**details**
+
+`$team_details = $faceit->teams('id')->details();`
+
+**stats**
+
+`$team_stats = $faceit->teams('id')->stats('csgo');`
+
+**tournaments**
+
+`$team_tournaments = $faceit->teams('id')->tournaments([array $additional_request_parameters]);`
+
+</p>
+</details>
 
 #### ~~Tournaments~~

@@ -65,5 +65,15 @@ class FaceitClient
     {
         return new FaceitRankings($this->api_key);
     }
+
+    /**
+     * @param string $id
+     * @return FaceitTeams
+     * @throws \Exception
+     */
+    public function teams(string $id): FaceitTeams
+    {
+        return new FaceitTeams($this->api_key, $id);
+    }
     
 }
