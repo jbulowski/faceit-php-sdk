@@ -57,5 +57,13 @@ class FaceitClient
     {
         return new FaceitMatches($this->api_key, $id);
     }
+
+    /**
+     * @return FaceitRankings
+     */
+    public function rankings(): FaceitRankings
+    {
+        return new FaceitRankings($this->api_key);
+    }
     
 }

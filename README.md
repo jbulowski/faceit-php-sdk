@@ -83,7 +83,22 @@ $faceit = new FaceitClient\FaceitClient([
 
 #### ~~Players~~
 
-#### ~~Rankings~~
+#### Rankings ✓
+
+<details>
+<summary>Click to expand</summary>
+<p>
+
+**global ranking**
+
+`$global_ranking = $faceit->rankings()->game('csgo')->region('EU')->details([array $additional_request_parameters]);`
+
+**player ranking**
+
+`$player_ranking = $faceit->rankings()->game('id')->region('region')->player('id' [, array $additional_request_parameters]);`
+
+</p>
+</details>
 
 #### Search ✓
 
