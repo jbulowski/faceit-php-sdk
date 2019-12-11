@@ -13,7 +13,7 @@ class FaceitSearch extends FaceitResource
     public function __construct(string $api_key)
     {
         $this->api_key = $api_key;
-        $this->setRequestEndpoint('search', true);
+        $this->setRequestEndpoint('search');
     }
 
     /**

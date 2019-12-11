@@ -9,6 +9,9 @@ class FaceitChampionships extends FaceitResource
 
     /**
      * FaceitChampionships constructor.
+     * @param string $api_key
+     * @param string $id
+     * @throws \Exception
      */
     public function __construct(string $api_key, string $id)
     {

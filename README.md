@@ -62,7 +62,22 @@ $faceit = new FaceitClient\FaceitClient([
 
 #### ~~Leaderboards~~
 
-#### ~~Matches~~
+#### Matches ✓
+
+<details>
+<summary>Click to expand</summary>
+<p>
+
+**details**
+
+`$match = $faceit->matches('id')->details();`
+
+**stats**
+
+`$stats = $faceit->matches('id')->stats();`
+
+</p>
+</details>
 
 #### ~~Organizers~~
 

@@ -47,5 +47,15 @@ class FaceitClient
     {
         return new FaceitGames($this->api_key);
     }
+
+    /**
+     * @param string $id
+     * @return FaceitMatches
+     * @throws \Exception
+     */
+    public function matches(string $id): FaceitMatches
+    {
+        return new FaceitMatches($this->api_key, $id);
+    }
     
 }
