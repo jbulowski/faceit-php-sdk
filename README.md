@@ -1,7 +1,5 @@
 # Documentation
 
-_Currently only supports the `search` endpoints_
-
 ## Installation
 
 `composer require jbulowski/faceit-php-sdk`
@@ -24,15 +22,15 @@ $faceit = new FaceitClient\FaceitClient([
 
 **details**
 
-`$championship = $faceit->championship('id')->details();`
+`$championship = $faceit->championship('id')->details([array $additional_request_parameters]);`
 
 **matches**
 
-`$championship_matches = $faceit->championship('id')->matches();`
+`$championship_matches = $faceit->championship('id')->matches([array $additional_request_parameters]);`
 
 **subscriptions**
 
-`$championship_subscriptions = $faceit->championship('id')->subscriptions();`
+`$championship_subscriptions = $faceit->championship('id')->subscriptions(array $additional_request_parameters);`
 
 </p>
 </details>
@@ -45,7 +43,7 @@ $faceit = new FaceitClient\FaceitClient([
 
 **games**
 
-`$games = $faceit->games()->details();`
+`$games = $faceit->games()->details([array $additional_request_parameters]);`
 
 **game**
 
@@ -108,27 +106,27 @@ $faceit = new FaceitClient\FaceitClient([
 
 **championships**
 
-`$championships = $faceit->search()->championships('name');`
+`$championships = $faceit->search()->championships('name' [, array $additional_request_parameters]);`
 
 **hubs**
 
-`$hubs = $faceit->search()->hubs('name');`
+`$hubs = $faceit->search()->hubs('name' [, array $additional_request_parameters]);`
 
 **organizers**
 
-`$organizers = $faceit->search()->organizers('name');`
+`$organizers = $faceit->search()->organizers('name' [, array $additional_request_parameters]);`
 
 **players**
 
-`$players = $faceit->search()->players('nickname');`
+`$players = $faceit->search()->players('nickname' [, array $additional_request_parameters]);`
 
 **teams**
 
-`$teams = $faceit->search()->teams('nickname');`
+`$teams = $faceit->search()->teams('nickname' [, array $additional_request_parameters]);`
 
 **tournaments**
 
-`$tournaments = $faceit->search()->tournaments('name');`
+`$tournaments = $faceit->search()->tournaments('name' [, array $additional_request_parameters]);`
 
 
 </p>
