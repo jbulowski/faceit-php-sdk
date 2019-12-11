@@ -7,7 +7,6 @@ namespace FaceitClient;
 class FaceitChampionships extends FaceitResource
 {
 
-
     /**
      * FaceitChampionships constructor.
      */

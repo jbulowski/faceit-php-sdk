@@ -37,7 +37,26 @@ $faceit = new FaceitClient\FaceitClient([
 </p>
 </details>
 
-#### ~~Games~~
+#### Games ✓
+
+<details>
+<summary>Click to expand</summary>
+<p>
+
+**games**
+
+`$games = $faceit->games()->details();`
+
+**game**
+
+`$game = $faceit->games()->game('game');`
+
+**parent**
+
+`$game_parent = $faceit->games()->parenOf('game');`
+
+</p>
+</details>
 
 #### ~~Hubs~~
 

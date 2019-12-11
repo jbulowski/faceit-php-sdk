@@ -30,9 +30,22 @@ class FaceitClient
         return new FaceitSearch($this->api_key);
     }
 
+    /**
+     * @param string $id
+     * @return FaceitChampionships
+     * @throws \Exception
+     */
     public function championship(string $id): FaceitChampionships
     {
         return new FaceitChampionships($this->api_key, $id);
+    }
+
+    /**
+     * @return FaceitGames
+     */
+    public function games(): FaceitGames
+    {
+        return new FaceitGames($this->api_key);
     }
     
 }
