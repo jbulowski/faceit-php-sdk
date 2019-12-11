@@ -30,7 +30,7 @@ $faceit = new FaceitClient\FaceitClient([
 
 **subscriptions**
 
-`$championship_subscriptions = $faceit->championship('id')->subscriptions(array $additional_request_parameters);`
+`$championship_subscriptions = $faceit->championship('id')->subscriptions([array $additional_request_parameters]);`
 
 </p>
 </details>
