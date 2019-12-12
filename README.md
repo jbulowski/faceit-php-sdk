@@ -56,7 +56,38 @@ $faceit = new FaceitClient\FaceitClient([
 </p>
 </details>
 
-#### ~~Hubs~~
+#### Hubs ✓
+
+<details>
+<summary>Click to expand</summary>
+<p>
+
+**details**
+
+`$hub_details = $faceit->hubs('id')->details();`
+
+**matches**
+
+`$hub_matches = $faceit->hubs('id')->matches();`
+
+**members**
+
+`$hub_members = $faceit->hubs('id')->members();`
+
+**roles**
+
+`$hub_roles = $faceit->hubs('id')->roles();`
+
+**rules**
+
+`$hub_rules = $faceit->hubs('id')->rules();`
+
+**stats**
+
+`$hub_stats = $faceit->hubs('id')->stats();`
+
+</p>
+</details>
 
 #### ~~Leaderboards~~
 

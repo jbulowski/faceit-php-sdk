@@ -85,5 +85,15 @@ class FaceitClient
     {
         return new FaceitPlayers($this->api_key, $id);
     }
+
+    /**
+     * @param string $id
+     * @return FaceitHubs
+     * @throws \Exception
+     */
+    public function hubs(string $id): FaceitHubs
+    {
+        return new FaceitHubs($this->api_key, $id);
+    }
     
 }
