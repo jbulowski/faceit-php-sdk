@@ -2,13 +2,15 @@
 
 declare(strict_types = 1);
 
-namespace FaceitClient;
+namespace FaceitClient\Endpoints;
 
-class FaceitGames extends FaceitResource
+use FaceitClient\FaceitResource;
+
+class Games extends FaceitResource
 {
 
     /**
-     * FaceitGames constructor.
+     * Games constructor.
      * @param string $api_key
      */
     public function __construct(string $api_key)

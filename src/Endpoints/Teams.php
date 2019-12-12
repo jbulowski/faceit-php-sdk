@@ -2,13 +2,15 @@
 
 declare(strict_types = 1);
 
-namespace FaceitClient;
+namespace FaceitClient\Endpoints;
 
-class FaceitTeams extends FaceitResource
+use FaceitClient\FaceitResource;
+
+class Teams extends FaceitResource
 {
 
     /**
-     * FaceitTeams constructor.
+     * Teams constructor.
      * @param $api_key
      * @param $id
      * @throws \Exception

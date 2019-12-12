@@ -2,13 +2,15 @@
 
 declare(strict_types = 1);
 
-namespace FaceitClient;
+namespace FaceitClient\Endpoints;
 
-class FaceitHubs extends FaceitResource
+use FaceitClient\FaceitResource;
+
+class Championships extends FaceitResource
 {
 
     /**
-     * FaceitHubs constructor.
+     * Championships constructor.
      * @param string $api_key
      * @param string $id
      * @throws \Exception
@@ -16,10 +18,10 @@ class FaceitHubs extends FaceitResource
     public function __construct(string $api_key, string $id)
     {
         if ($id === '') {
-            throw new \Exception('Hub ID is required!');
+            throw new \Exception('Championship ID is required!');
         }
         $this->api_key = $api_key;
-        $this->setRequestEndpoint("hubs/{$id}");
+        $this->setRequestEndpoint("championships/{$id}");
     }
 
     /**
@@ -42,8 +44,8 @@ class FaceitHubs extends FaceitResource
      */
     public function matches(array $additional_request_parameters = []): object
     {
+        $this->setRequestEndpoint("matches");
         $this->request_parameters = $additional_request_parameters;
-        $this->setRequestEndpoint('matches');
 
         return $this->faceitApiCall();
     }
@@ -52,44 +54,10 @@ class FaceitHubs extends FaceitResource
      * @param array $additional_request_parameters
      * @return object
      */
-    public function members(array $additional_request_parameters = []): object
+    public function subscriptions(array $additional_request_parameters = []): object
     {
+        $this->setRequestEndpoint("subscriptions");
         $this->request_parameters = $additional_request_parameters;
-        $this->setRequestEndpoint('members');
-
-        return $this->faceitApiCall();
-    }
-
-    /**
-     * @param array $additional_request_parameters
-     * @return object
-     */
-    public function roles(array $additional_request_parameters = []): object
-    {
-        $this->request_parameters = $additional_request_parameters;
-        $this->setRequestEndpoint('roles');
-
-        return $this->faceitApiCall();
-    }
-
-    /**
-     * @return object
-     */
-    public function rules(): object
-    {
-        $this->setRequestEndpoint('rules');
-
-        return $this->faceitApiCall();
-    }
-
-    /**
-     * @param array $additional_request_parameters
-     * @return object
-     */
-    public function stats(array $additional_request_parameters = []): object
-    {
-        $this->request_parameters = $additional_request_parameters;
-        $this->setRequestEndpoint('stats');
 
         return $this->faceitApiCall();
     }

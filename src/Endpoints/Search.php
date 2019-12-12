@@ -2,13 +2,15 @@
 
 declare(strict_types = 1);
 
-namespace FaceitClient;
+namespace FaceitClient\Endpoints;
 
-class FaceitSearch extends FaceitResource
+use FaceitClient\FaceitResource;
+
+class Search extends FaceitResource
 {
 
     /**
-     * FaceitSearch constructor.
+     * Search constructor.
      */
     public function __construct(string $api_key)
     {

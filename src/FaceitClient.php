@@ -4,6 +4,16 @@ declare(strict_types = 1);
 
 namespace FaceitClient;
 
+use FaceitClient\Endpoints\Championships;
+use FaceitClient\Endpoints\Games;
+use FaceitClient\Endpoints\Hubs;
+use FaceitClient\Endpoints\Matches;
+use FaceitClient\Endpoints\Players;
+use FaceitClient\Endpoints\Rankings;
+use FaceitClient\Endpoints\Search;
+use FaceitClient\Endpoints\Teams;
+use FaceitClient\Endpoints\Tournaments;
+
 class FaceitClient
 {
 
@@ -23,85 +33,85 @@ class FaceitClient
     }
 
     /**
-     * @return FaceitSearch
+     * @return Search
      */
-    public function search(): FaceitSearch
+    public function search(): Search
     {
-        return new FaceitSearch($this->api_key);
+        return new Search($this->api_key);
     }
 
     /**
      * @param string $id
-     * @return FaceitChampionships
+     * @return Championships
      * @throws \Exception
      */
-    public function championship(string $id): FaceitChampionships
+    public function championship(string $id): Championships
     {
-        return new FaceitChampionships($this->api_key, $id);
+        return new Championships($this->api_key, $id);
     }
 
     /**
-     * @return FaceitGames
+     * @return Games
      */
-    public function games(): FaceitGames
+    public function games(): Games
     {
-        return new FaceitGames($this->api_key);
+        return new Games($this->api_key);
     }
 
     /**
      * @param string $id
-     * @return FaceitMatches
+     * @return Matches
      * @throws \Exception
      */
-    public function matches(string $id): FaceitMatches
+    public function matches(string $id): Matches
     {
-        return new FaceitMatches($this->api_key, $id);
+        return new Matches($this->api_key, $id);
     }
 
     /**
-     * @return FaceitRankings
+     * @return Rankings
      */
-    public function rankings(): FaceitRankings
+    public function rankings(): Rankings
     {
-        return new FaceitRankings($this->api_key);
+        return new Rankings($this->api_key);
     }
 
     /**
      * @param string $id
-     * @return FaceitTeams
+     * @return Teams
      * @throws \Exception
      */
-    public function teams(string $id): FaceitTeams
+    public function teams(string $id): Teams
     {
-        return new FaceitTeams($this->api_key, $id);
+        return new Teams($this->api_key, $id);
     }
 
     /**
      * @param string $id
-     * @return FaceitPlayers
+     * @return Players
      * @throws \Exception
      */
-    public function players(string $id): FaceitPlayers
+    public function players(string $id): Players
     {
-        return new FaceitPlayers($this->api_key, $id);
+        return new Players($this->api_key, $id);
     }
 
     /**
      * @param string $id
-     * @return FaceitHubs
+     * @return Hubs
      * @throws \Exception
      */
-    public function hubs(string $id): FaceitHubs
+    public function hubs(string $id): Hubs
     {
-        return new FaceitHubs($this->api_key, $id);
+        return new Hubs($this->api_key, $id);
     }
 
     /**
-     * @return FaceitTournaments
+     * @return Tournaments
      */
     public function tournaments()
     {
-        return new FaceitTournaments($this->api_key);
+        return new Tournaments($this->api_key);
     }
     
 }
