@@ -18,7 +18,7 @@ class FaceitRankings extends FaceitResource
     }
 
     /**
-     * @param string $game
+     * @param string $id
      * @return $this
      * @throws \Exception
      */

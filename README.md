@@ -79,7 +79,34 @@ $faceit = new FaceitClient\FaceitClient([
 
 #### ~~Organizers~~
 
-#### ~~Players~~
+#### Players ✓
+
+<details>
+<summary>Click to expand</summary>
+<p>
+
+**details**
+
+`$player = $faceit->players('id')->details();`
+
+**history**
+
+`$player_history = $faceit->players('id')->history('csgo'[, array $additional_request_parameters]);`
+
+**hubs**
+
+`$player_hubs = $faceit->players('id')->hubs([array $additional_request_parameters]);`
+
+**stats**
+
+`$player_stats = $faceit->players('id')->stats('csgo');`
+
+**tournaments**
+
+`$player_tournaments = $faceit->players('id')->tournaments([array $additional_request_parameters]);`
+
+</p>
+</details>
 
 #### Rankings ✓
 
