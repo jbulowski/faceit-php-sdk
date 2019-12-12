@@ -211,4 +211,31 @@ $faceit = new FaceitClient\FaceitClient([
 </p>
 </details>
 
-#### ~~Tournaments~~
+#### Tournaments ✓
+
+<details>
+<summary>Click to expand</summary>
+<p>
+
+**tournaments**
+
+`$tournaments = $faceit->tournaments()->all();`
+
+**details**
+
+`$tournament_details = $faceit->tournaments()->tournament('id');`
+
+**brackets**
+
+`$tournament_brackets = $faceit->tournaments()->brackets('id');`
+
+**matches**
+
+`$tournament_matches = $faceit->tournaments()->matches('id');`
+
+**teams**
+
+`$tournament_teams = $faceit->tournaments()->teams('id');`
+
+</p>
+</details>

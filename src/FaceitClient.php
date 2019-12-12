@@ -95,5 +95,13 @@ class FaceitClient
     {
         return new FaceitHubs($this->api_key, $id);
     }
+
+    /**
+     * @return FaceitTournaments
+     */
+    public function tournaments()
+    {
+        return new FaceitTournaments($this->api_key);
+    }
     
 }
